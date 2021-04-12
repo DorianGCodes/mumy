@@ -3,11 +3,10 @@ from utils import *
 from imputationMethods import *
 
 files = ['kc_hous_6%','kc_hous_15%','kc_hous_20%','kc_hous_40%']
-dataframe = pd.read_csv(filepath_or_buffer='dataSets/kc_hous_6%', sep=',', header=0, na_values='?')
 dataframes = {}
 
 for i in files:
-    dataframes[i] = (pd.read_csv(filepath_or_buffer=i,sep=',',header=0,na_values='?'))
+    dataframes[i] = (pd.read_csv(filepath_or_buffer='dataSets/'+i,sep=',',header=0,na_values='?'))
 
 for i in files:
     columns_with_nans = dataframes[i][['sqft_living','price']]
