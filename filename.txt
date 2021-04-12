@@ -1,0 +1,49 @@
+
+
+~~~~~~ No missing values:
+price
+Mean	Std. dev.	Q1	Q2	Q3
+538743.73	363003.91	322000.0	450000.0	641000.0
+sqft_living
+Mean	Std. dev.	Q1	Q2	Q3
+2077.44	913.81	1420.0	1910.0	2550.0
+Regressor coeficient:
+[[0.0017623]]
+Regressor intercept:
+[1128.00666567]
+
+~~~~~~ Mean:
+price
+Mean	Std. dev.	Q1	Q2	Q3
+540002.37	361135.68	325000.0	460000.0	635000.0
+sqft_living
+Mean	Std. dev.	Q1	Q2	Q3
+2077.91	901.73	1440.0	1950.0	2520.0
+Regressor coeficient:
+[[0.00167538]]
+Regressor intercept:
+[1173.20271249]
+
+~~~~~~ No missing values:
+sqft_living
+Mean	Std. dev.	Q1	Q2	Q3
+2077.44	913.81	1420.0	1910.0	2550.0
+price
+Mean	Std. dev.	Q1	Q2	Q3
+538743.73	363003.91	322000.0	450000.0	641000.0
+Regressor coeficient:
+[[278.0917005]]
+Regressor intercept:
+[-38974.31492745]
+
+~~~~~~ Mean:
+sqft_living
+Mean	Std. dev.	Q1	Q2	Q3
+2077.91	901.73	1440.0	1950.0	2520.0
+price
+Mean	Std. dev.	Q1	Q2	Q3
+540002.37	361135.68	325000.0	460000.0	635000.0
+Regressor coeficient:
+[[268.72322324]]
+Regressor intercept:
+[-18381.39033801]
