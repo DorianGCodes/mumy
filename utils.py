@@ -124,7 +124,7 @@ def generateNans(dataframe) :
     columns = dataframe[['price', 'sqft_living']]
     columns_with_nans = create_nans2(columns, 97)
 
-    filePath = "kc_hous_6%"
+    filePath = "dataSets/kc_hous_6%"
     columns_with_nans.to_csv(filePath)
     df = pd.read_csv(filepath_or_buffer=filePath, sep=',', header=0, na_values='?')
 

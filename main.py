@@ -3,7 +3,7 @@ from utils import *
 from imputationMethods import *
 
 files = ['kc_hous_6%','kc_hous_15%','kc_hous_20%','kc_hous_40%']
-dataframe = pd.read_csv(filepath_or_buffer='kc_hous_6%', sep=',', header=0, na_values='?')
+dataframe = pd.read_csv(filepath_or_buffer='dataSets/kc_hous_6%', sep=',', header=0, na_values='?')
 dataframes = {}
 
 for i in files:
