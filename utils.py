@@ -4,6 +4,14 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 
+def create_nans(dataframe, nan_percentage=0.0):
+    new_dataframe = dataframe.copy(deep=True)
+    global column_names
+    column_names = dataframe.columns.tolist()
+    for i in column_names:
+        new_dataframe[i] = dataframe[i].sample(frac=(100.0 - nan_percentage)/100)
+    return new_dataframe
+
 def create_nans2(dateframe,nan_percentage = 100.0):
     # dateframe['sqft_living15'] = dateframe['sqft_living15'].sample(frac=0.1)
     columnsName = dateframe.columns.tolist()
@@ -121,12 +129,12 @@ def generateNans(dataframe) :
     first_column = dataframe['price']
     second_column = dataframe['sqft_living']
 
-    columns = dataframe[['price', 'sqft_living']]
-    columns_with_nans = create_nans2(columns, 97)
 
-    filePath = "dataSets/kc_hous_6%"
+    columns_with_nans = create_nans(dataframe, 20)
+
+    filePath = "dataSets/kc_hous_40%"
     columns_with_nans.to_csv(filePath)
     df = pd.read_csv(filepath_or_buffer=filePath, sep=',', header=0, na_values='?')
 
-    perc = df.dropna().shape[0] / df.shape[0]
+    perc = df[['price','sqft_living']].dropna().shape[0] / df.shape[0]
     print(perc)
